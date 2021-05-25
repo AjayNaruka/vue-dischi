@@ -9,7 +9,7 @@
     </div>
     <div>
       <select name="filters" id="filters" class="my-select" @change="optionChange($event)">
-        <option >--scegli--</option>
+        <option v-if="searchOnce" >--scegli--</option>
         <option value="genre">Genere</option>
         <option value="author">Artista</option>
       </select>
@@ -26,6 +26,7 @@ export default {
   name:'Search',
   data(){
     return{
+      searchOnce:true,
       inputText:'',
       /* filterOption:this.optionChange() */
       filterOption:0,
@@ -38,9 +39,10 @@ export default {
       this.startSearch();
     },
     startSearch(){
-      this.$emit('ricerca',this.inputText,this.filterOption  )
+      this.$emit('ricerca',this.inputText,this.filterOption)
     },
     optionChange(event){
+      this.searchOnce=false
       console.log(event.target.value);
       this.filterOption=event.target.value
       console.log('option: ', this.filterOption);
