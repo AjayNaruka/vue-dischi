@@ -61,7 +61,7 @@ export default {
   computed:{
     filterAlbums(){
       if(this.textToSearch==='') return this.musicArray
-      if(this.filterValue===0) return this.musicArray.filter(item => item.genre.toLowerCase().includes(this.textToSearch.toLowerCase()))
+      if(this.filterValue===0) return this.musicArray.filter(item => item.genre.toLowerCase().includes(this.textToSearch.toLowerCase())) /* RICERCA PER GENERE COME DEFAULT */
       return this.musicArray.filter(item => item[this.filterValue].toLowerCase().includes(this.textToSearch.toLowerCase()))
     }
   }
