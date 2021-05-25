@@ -52,6 +52,9 @@ export default {
 </script>
 
 <style>
+form{
+  margin-bottom: 15px ;
+}
   input{
     margin-bottom: 20px;
   }
