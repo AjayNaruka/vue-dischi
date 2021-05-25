@@ -6,7 +6,7 @@
       v-for="(genere,index) in possibleGenres"
       :key="index"
       :value="genere.toLowerCase()"
-      @click='startSearchGenre'
+      
       >
 
       {{genere}}

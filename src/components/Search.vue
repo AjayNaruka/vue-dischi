@@ -12,6 +12,7 @@
         <option v-if="searchOnce" >--scegli--</option>
         <option value="genre">Genere</option>
         <option value="author">Artista</option>
+        <option value="year">Anno</option>
       </select>
       <button class="ms-3 btn btn-primary" @click.prevent="startSearch()">CERCA</button> <!-- PREVENT per evitare il reload della pagina dovuto dal form -->
       <button class="ms-3 btn btn-warning" @click.prevent='resetSearch()'>RESET</button>
